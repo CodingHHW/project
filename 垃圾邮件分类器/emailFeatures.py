@@ -16,6 +16,8 @@ if __name__ == '__main__':
     email_contents = f.read()
     from processEmail import processEmail
     word_indices = processEmail(email_contents)
+    print word_indices
+    print len(word_indices)
     features = emailFeatures(word_indices)
     print len(features)
 

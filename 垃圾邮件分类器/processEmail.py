@@ -21,7 +21,8 @@ def processEmail(email_contents):
 
     if email_contents != '':
         re_words = re.findall(r'[A-Za-z]+', email_contents)
-        # print re_words
+        print re_words
+        print len(re_words)
         for word in re_words:
             word = PorterStemmer().stem(word)
             # word, _ = re.subn(r'[^a-zA-Z0-9]', '', word)
